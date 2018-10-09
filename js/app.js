@@ -41,12 +41,12 @@ class Player {
   }
   update() {
     // Win condition. Each win increases score by one(1)
-    let score = document.querySelector('#score-value');
+    const score = document.querySelector('#score-value');
     if (this.y === -15) {
       setTimeout(() => {
         this.y = 400;
       }, 10); // Values above 10ms increases count by more than one.
-      count++;
+      count += 1;
     }
     score.innerHTML = count;
 
@@ -54,7 +54,7 @@ class Player {
     allEnemies.forEach(enemy => {
       if (enemy.x >= this.x - 70 && enemy.x < this.x && enemy.y === this.y) {
         player.y = 400;
-        count--;
+        count -= 1;
       }
     });
 
@@ -148,12 +148,12 @@ function addEnemies() {
         allEnemies.push(bug01, bug02, bug03, bug04, bug05, bug06);
       }
       break;
+  }
 
-      function addBug(value, newbug) {
-        if (totalEnemies === value) {
-          allEnemies.push(newbug);
-        }
-      }
+  function addBug(value, newbug) {
+    if (totalEnemies === value) {
+      allEnemies.push(newbug);
+    }
   }
 }
 
@@ -163,7 +163,7 @@ const player = new Player(200, 400);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
-  var allowedKeys = {
+  const allowedKeys = {
     37: 'left',
     38: 'up',
     39: 'right',
