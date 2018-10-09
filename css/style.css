@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    visibility: hidden;
+}
+
+.score-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #59e;
+    width: 505px;
+    height: 120px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
